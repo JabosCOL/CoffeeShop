@@ -1,0 +1,34 @@
+@use "base/variables" as v;
+
+.text-center {
+    text-align: center;
+}
+
+.bg-primary {
+    background-color: v.$primary;
+}
+
+.bottom {
+    border-radius: 1rem;
+    margin: -10rem auto;
+}
+
+.border-top {
+    border-radius: 1rem;
+}
+
+.pb-0 {
+    padding-bottom: 0;
+}
+
+.py-15 {
+    padding: 15rem 0;
+}
+
+.py-5 {
+    padding: 5rem 0;
+}
+
+.mt-5 {
+    margin-top: 5rem;
+}

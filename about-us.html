@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee SASS</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bona+Nova&family=Raleway:wght@100..900&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/build/css/app.css">
+    </head>
+<body>
+    <header class="header header-about-us">
+        <div class="header-content container">
+            <div class="bar">
+                <div class="logo">
+                    <img src="/build/img/logo.svg" alt="cafe logo">
+                </div>
+                <nav class="main-nav">
+                    <a href="index.html">Home</a>
+                    <a class="active" href="about-us.html">About Us</a>
+                    <a href="process.html">Process</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="contact.html">Get In Touch</a>
+                </nav>
+            </div>
+            <div class="header-text">
+                <h1>A new experience</h1>
+            </div>
+        </div>
+    </header>
+    <main class="main container">
+        <div class="main-content">
+            <h2><span>Know more</span> about us</h2>
+            <div class="about-flex">
+                <div class="photo">
+                    <picture>
+                        <source srcset="build/img/about_us_sidebar.avif" type="image/avif">
+                        <source srcset="build/img/about_us_sidebar.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/about_us_sidebar.jpg" alt="about us photo">
+                    </picture>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est perspiciatis unde mollitia saepe reprehenderit laboriosam ab cum. Aut sequi a sapiente tempora? Ipsam doloribus repudiandae possimus alias corrupti culpa!</p>
+                    <h3>Great taste!</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate, obcaecati esse quo, dolor repudiandae accusamus iure natus est commodi rem iste dolore quasi aliquam ut amet recusandae magni ad!</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-content container">
+            <div class="footer-flex">
+                <div class="footer-box">
+                    <h3>Address</h3>
+                    <p>897 Main Street</p>
+                    <p>Brisbane, AU</p>
+                </div>
+                <div class="footer-box">
+                    <h3>Booking</h3>
+                    <p>7-1234 5678</p>
+                    <a href="tel:7-1234 5678">Get in touch</a>
+                </div>
+                <div class="footer-box">
+                    <h3>Opening Hours</h3>
+                    <p>Mon-Thus: 11:00 - 22:00</p>
+                    <p>Fri-Sat: 09:00 - 24:00</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <p class="copyright">All Rights Reserved &#xa9;</p>
+        </div>
+    </footer>
+    <script src="src/js/img.js"></script>
+</body>
+</html>

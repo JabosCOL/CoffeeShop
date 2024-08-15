@@ -1,0 +1,40 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.process {
+    margin-bottom: v.$gap;
+
+    @include m.tablet {
+        display: flex;
+        align-items: center;
+        gap: v.$gap;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &:nth-child(odd) {
+        .text {
+            order: -1;
+        }
+    }
+
+    .photo,
+    .text {
+        flex: 1;
+    }
+
+    .text {
+        h3 {
+            text-align: left;
+            margin: 2rem 0 0 0;
+            color: v.$primary;
+        }
+
+        span {
+            border-bottom: 5px solid v.$secondary;
+            padding-bottom: .5rem;
+        }
+    }
+}

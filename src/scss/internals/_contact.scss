@@ -1,0 +1,51 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.form-content {
+    @include m.tablet {
+        @include m.grid(repeat(2, 1fr), 2rem);
+
+        background-image: url(../img/coffee_beans.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: 40%;
+    }
+}
+
+.form {
+    .field {
+        margin-bottom: 2rem;
+
+        label {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 1rem;
+            border: .5rem solid v.$primary;
+        }
+    }
+
+    input {
+        &[type="submit"] {
+            width: 100%;
+            padding: 1rem;
+            color: v.$white;
+            background-color: v.$primary;
+            font-size: 2.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: transform .3s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
+        }
+    }
+}

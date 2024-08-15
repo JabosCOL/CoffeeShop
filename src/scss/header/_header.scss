@@ -1,0 +1,51 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.header {
+    padding: 5rem 0 10rem 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include m.tablet {
+        min-height: 70rem;
+    }
+
+    &::before {
+        content: '';
+        background-color: v.$black;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    .header-content {
+        position: relative;
+
+        h1 {
+            font-family: v.$cursiveFont;
+            font-weight: 400;
+            font-size: 3.5rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: v.$white;
+            margin-top: 5rem;
+
+            @include m.tablet {
+                margin-top: 10rem;
+            }
+        }
+    }
+}
+
+// Header for each page
+
+@include m.bg-images(header-home, header_home);
+@include m.bg-images(header-about-us, header_about_us);
+@include m.bg-images(header-process, header_process);
+@include m.bg-images(header-menu, header_menu);
+@include m.bg-images(header-gallery, header_gallery);
+@include m.bg-images(header-contact, header_contact);

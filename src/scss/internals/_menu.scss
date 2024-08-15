@@ -1,0 +1,27 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.menu-introduction {
+    aspect-ratio: 3 / 7;
+    background-image: url(../img/coffee.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @include m.smartphone {
+        aspect-ratio: 3 / 4;
+    }
+
+    @include m.desktop {
+        @include m.grid(repeat(2, 1fr), v.$gap);
+        aspect-ratio: 16 / 6;
+        background-size: 40%;
+        background-position: bottom right;
+    }
+
+    .text {
+        p {
+            font-size: 2rem;
+        }
+    }
+}

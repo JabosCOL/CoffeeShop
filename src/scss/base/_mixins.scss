@@ -1,0 +1,37 @@
+@use 'variables' as v;
+
+@mixin smartphone {
+    @media (min-width: v.$smartphone) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content
+    }
+};
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content
+    }
+};
+
+@mixin grid ($columns, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    gap: $gap;
+};
+
+@mixin bg-images ($class, $fileName) {
+    .notavif.notwebp .#{$class} {
+        background-image: url(../img/#{$fileName}.jpg);
+    }
+    .webp .#{$class} {
+        background-image: url(../img/#{$fileName}.webp);
+    }
+    .avif .#{$class} {
+        background-image: url(../img/#{$fileName}.avif);
+    }
+};
